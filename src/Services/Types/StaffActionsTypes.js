@@ -1,0 +1,2 @@
+export const TOPBAR_DATA = "TOPBAR_DATA";
+export const VALID_INFO_APPROVAL = "VALID_INFO_APPROVAL";

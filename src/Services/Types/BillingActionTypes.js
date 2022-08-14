@@ -1,0 +1,2 @@
+export const GET_STATEMENTS = "GET_STATEMENTS";
+export const GET_SUMMARY = "GET_SUMMARY";

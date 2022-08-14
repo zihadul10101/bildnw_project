@@ -1,0 +1,6 @@
+#signupOtp div{
+    @apply flex space-x-4;
+}
+#signupOtp input[type=text]{
+    @apply border-[3px] border-inputBorder w-14 h-14 block my-2 rounded focus:outline-inputBorder px-3 py-3 text-2xl text-center;
+}

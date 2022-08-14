@@ -1,0 +1,20 @@
+.account:hover .account-menu{
+    @apply block;
+}
+.account-menu li{
+    @apply text-lg font-medium py-1 my-2 px-4 cursor-pointer text-primary-ash-400;
+}
+
+.notification:hover .notification-menu{
+    @apply block overflow-y-scroll;
+}
+.notification-menu li{
+    @apply text-lg font-medium py-1 my-2 px-4 cursor-pointer text-primary-ash-400;
+}
+
+.language:hover .language-menu{
+    @apply block;
+}
+.language-menu li{
+    @apply text-lg font-medium py-1 my-2 px-4 cursor-pointer text-primary-ash-400;
+}
