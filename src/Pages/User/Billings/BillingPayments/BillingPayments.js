@@ -27,38 +27,55 @@ const BillingPayments = () => {
   //     PurchaseRepayment(client_details.client_details?.id, purchase[0]?.id, data, navigate)
   //   );
   // };
+  const summarybox = {
+
+    width: '256px',
+    height: '273px',
+    background: '#FFFFFF',
+    boxShadow: '0px 8px 12px rgba(9, 30, 66, 0.15), 0px 0px 1px rgba(9, 30, 66, 0.31)',
+    borderRadius: '8px'
+  }
+  const detilsbox ={
+  
+width: '776px',
+maxHeight: '615px',
+background: '#FFFFFF',
+boxShadow: '0px 8px 12px rgba(9, 30, 66, 0.15), 0px 0px 1px rgba(9, 30, 66, 0.31)',
+borderRadius: '8px'
+  }
   return (
     <MainLayout>
 
-      <div className="px-10 py-10 grid grid-cols-10 space-x-6">
-        <div className="col-span-2   h-72 shadow-lg shadow-gray-300  rounded">
+      <div className="px-10 py-10 grid grid-cols-8 ">
+        <div style={summarybox} className="col-span-2 ">
         <button className="flex justify-start items-center  text-lg w-full py-2 px-4 rounded bg-dark-gray text-white font-poppins font-normal mr-1">
-         {" "}
-            <img src={sammary} alt="" className="w-6 h-6 mr-3"/>
+            {" "}
+            <img src={sammary} alt="" className="w-6 h-6 mr-3" />
             {" "}
             {t("summary")}{" "}
           </button>
-          <div className="h-full   py-5">
-            <ul className="space-y-4 p-4 ">
+          <div className="h-full  p-5 ">
+            <ul className="space-y-4  ">
               <li className="text-[14px] border-b-2 pb-1 ">
-                
-                <p className="font-poppins font-normal text-[#8993A4]"> {t("balance")}:</p>
-                <p className="font-semibold">SAR 1,00000</p>
+
+                <p className="font-poppins font-normal font-[14px] text-[#8993A4] leading-5"> {t("balance")}:</p>
+                <p className="font-semibold font-[16px] font-poppins leading-6">SAR 800,000</p>
               </li>
-              <li className="text-[14px] border-b-2 pb-1  ">
-               
-                <p className="font-poppins font-normal text-[#8993A4]">  {t("next_repayment_date")}: </p>
-                <p className="font-semibold"> 25/06/2022 </p>
+              <li className=" border-b-2 pb-1  ">
+
+                <p className="font-poppins font-normal font-[14px] text-[#8993A4] leading-5">  {t("next_repayment_date")}: </p>
+                <p className="font-semibold font-[16px] font-poppins leading-6"> 25/06/2022 </p>
               </li>
-              <li className="text-[14px]  ">
-               
-                <p className="font-poppins font-normal text-[#8993A4]">   {t("next_repayment_ammount")}:</p>
-                <p className="font-semibold"> SAR 500,000</p>
+              <li className=" ">
+
+                <p className="font-poppins font-normal font-[14px] text-[#8993A4] leading-5">
+                  {t("next_repayment_ammount")}:</p>
+                <p className="font-semibold font-[16px] font-poppins leading-6"> SAR 500,000</p>
               </li>
             </ul>
           </div>
         </div>
-        <div className="col-span-7 border-2 shadow-lg shadow-gray-300 max-h-auto  rounded">
+        <div style={detilsbox} className="col-span-6 border-2">
           
           <div className="px-6 py-8 h-6/12">
             <div className="w-full  overflow-y-scroll h-72  border-4 rounded-lg bg-[#EBECF0]">

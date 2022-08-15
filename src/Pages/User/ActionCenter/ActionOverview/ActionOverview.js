@@ -80,9 +80,9 @@ const ActionOverview = () => {
   };
 
   const statusbox = {
-    background: '#FFFFFF', 
+    background: '#FFFFFF',
     boxShadow: "0px 8px 12px rgba(9, 30, 66, 0.15), 0px 0px 1px rgba(9, 30, 66, 0.31)"
- 
+
   }
   const companybox = {
     background: '#FFFFFF',
@@ -91,6 +91,13 @@ const ActionOverview = () => {
   const actionbox = {
     background: '#FFFFFF',
     boxShadow: '0px 8px 12px rgba(9, 30, 66, 0.15), 0px 0px 1px rgba(9, 30, 66, 0.31)'
+  }
+  const innerbox = {
+    padding: '4px 12px',
+    width: '208px',
+    height: '48px',
+    background: 'rgba(9, 30, 66, 0.04)',
+    borderRadius: '3px'
   }
   return (
     <MainLayout>
@@ -101,36 +108,43 @@ const ActionOverview = () => {
           <h3 className="text-base font-bold font-poppins p-3">{t("your_action_center")}</h3>
         </div>
         <div className="flex flex-wrap  ">
-          
 
-            <div style={actionbox} className="w-60  h-60 rounded-lg p-3 ml-6  mt-6">
-              <div className="text-center">
-                <p className="text-base text-[#505F79] font-medium font-[16px]  font-poppins px-4 border-borderColor mb-4">Actions needs approval</p>
-                <Link to="/action-center/apply-credit">
-                  <div className="flex text-slate-500 text-sm p-2 border-2 h-auto w-52 rounded mb-7 bg-action-btnBg">
-                    <img src={CreditLine} alt="Credit Line" />
-                    <span className="mx-4 font-semibold">
+
+          <div style={actionbox} className="w-60  h-60 rounded-lg p-3 ml-6  mt-6">
+            <div className="text-center">
+              <p className=" text-[#505F79] font-medium font-[16px]  font-poppins px-4  mb-4">Actions needs approval</p>
+              <div className="space-y-4">
+
+                <div style={innerbox} className="border-2">
+                  <div className="flex  item-center justify-center p-1 ">
+                    <img src={CreditLine} alt="Credit Line" className='w-[18px] h-[18px] mr-3 ' />
+                    <p className="font-medium font-[14px] text-[#A5ADBA] font-poppins">
                       {t("apply_for_creditline")}
-                    </span>
+                    </p>
                   </div>
-                </Link>
-                <Link to="#">
-                  <div className="flex text-slate-500 text-sm p-2 border-2 h-auto w-52 rounded bg-action-btnBg">
-                    <img src={Materials} alt="Purchase Materials" />
-                    <span className="mx-2">
-                      <b> {t("purchase_materials")} </b>
-                    </span>
-                  </div>
-                </Link>
+                </div>
 
-                <div className="flex text-slate-500 text-sm p-2 border-2 h-auto w-54 rounded mt-7 bg-action-btnBg">
-                  <img src={UploadNotes} alt="Upload Notes" />
-                  <span
-                    className="mx-4 font-semibold cursor-pointer"
-                    onClick={() => handleDeliveryNote()}
-                  >
-                    {t('upload_delivery_note')}
-                  </span>
+
+                <div style={innerbox} className="border-2">
+                  <div className="flex  item-center justify-center p-1 ">
+                    <img src={Materials} alt="Purchase Materials" className='w-[18px] h-[18px] mr-2 ' />
+                    <p className="font-medium font-[14px] text-[#A5ADBA] font-poppins">
+                      {t("purchase_materials")}
+                    </p>
+                  </div>
+                </div>
+
+
+                <div style={innerbox} className="border-2">
+                  <div className="flex  item-center justify-center p-1 ">
+                    <img src={UploadNotes} alt="Upload Notes" className='w-[18px] h-[18px] mr-2 ' />
+                    <p
+                      className="font-medium font-[14px] text-[#A5ADBA] cursor-pointer font-poppins"
+                      onClick={() => handleDeliveryNote()}
+                    >
+                      {t('upload_delivery_note')}
+                    </p>
+                  </div>
                 </div>
                 {/* Modal is here */}
                 <Modal
@@ -175,7 +189,8 @@ const ActionOverview = () => {
                 </Modal>
               </div>
             </div>
-         
+          </div>
+
           {/* Company Info  */}
           <div style={companybox} className=" w-96 h-96 border-borderColor p-3 rounded-lg ml-3 mt-6">
             <div className="first-box-title">

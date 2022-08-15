@@ -64,10 +64,10 @@ const OverviewMain = () => {
             </div>
             <div className="px-6 py-8">
               <img src={Status} alt="Status" />
-              <p className="text-[#FF8B00] font-poppins uppercase font-normal left-1 text-status-soft">Pre-Approval Pending</p>
+              <span className="text-[#FF8B00] bg-[#FFFAE6] font-poppins uppercase font-bold left-1 rounded-lg">Pre-Approval Pending</span>
               {/* progress bar  */}
-              <UiProgressBar width="40%" />
-              <p className="text-[#8993A4] font-poppins font-normal mt-4">Next Step:</p>
+              <UiProgressBar  width="30%" />
+              <p className="text-[#8993A4] font-poppins font-normal mt-5">Next Step:</p>
               <UiArrowButton label={t('Provide Company Details')} />
             </div>
           </div>
@@ -114,7 +114,7 @@ const OverviewMain = () => {
                 <div className="h-full flex flex-col justify-center items-center">
                   <img src={CashIcon} alt="Total Loans" />
                   <ul className="space-y-4">
-                    <li className="text-[44px] font-semibold text-primary-3">
+                    <li className="text-[44px] font-semibold text-[#505F79]">
                       500,000<sub className="text-[22px]">SAR</sub>
                     </li>
                   </ul>

@@ -16,7 +16,9 @@ import "../../../../Assets/Styles/scss/companyDetails.scss";
 import DocumentIcon from "../../../../Assets/images/document.svg";
 import DocIcon from "../../../../Assets/images/docIcon.svg";
 import AddUserIcon from "../../../../Assets/images/addUser.svg";
+import BlackUserIcon from "../../../../Assets/images/userblack.svg";
 import UserIcon from "../../../../Assets/images/user.svg";
+import errorIcon from "../../../../Assets/images/error.svg";
 import Editicon from "../../../../Assets/images/editicon.svg";
 import RevokIcon from "../../../../Assets/images/revok.svg";
 
@@ -37,6 +39,7 @@ const CompanyInfo = () => {
   const [clientDetails, setClientDetails] = useState({});
   const [inputValue, setInputValue] = useState({});
   const [open, setOpen] = useState(false);
+  const [opens, setOpens] = useState(false);
   const modalRef = useRef(null);
 
   // language
@@ -95,11 +98,18 @@ const CompanyInfo = () => {
     paddingBottom: "8px",
     cursor: 'pointer'
   };
+  const companybox = {
+    width:'1055px',
+    maxHeight: '644px',
+    background: '#FFFFFF',
+    boxShadow: "0px 8px 12px rgba(9, 30, 66, 0.15), 0px 0px 1px rgba(9, 30, 66, 0.31)"
+
+  }
   return (
     <MainLayout>
       <div className="px-10 py-10 ">
 
-        <div className=" border-2 shadow-lg shadow-gray-300 max-h-auto  rounded">
+        <div style={companybox} className=" border-2   rounded-lg">
           <div className="first-box-title h-3/12">
             <div className=" flex gap-3 text-primary-ash-400 cursor-pointer font-semibold px-4 py-6 border-b-2 ">
 
@@ -429,62 +439,87 @@ const CompanyInfo = () => {
                       initialFocusRef={modalRef}
                       center
                     >
-                      <div className="block text-xl cursor-pointer flex items-center gap-x-3 mx-auto  p-3 text-center  rounded-sm">
-                        <img src={UserIcon} alt="" className="w-5 h-5" />
-
-                        <p className="font-bold">Team Invite</p>
+                     <div className="px-3">
+                     <div className="block text-xl cursor-pointer flex items-center gap-x-3 mx-auto   text-center  rounded-sm">
+                        <img src={BlackUserIcon} alt="" className="w-5 h-5" />
+                        <p className="font-bold font-poppins">Team Invite</p>
                       </div>
-                      <h1 className="px-3">Please enter the user’s email you want to invite to bildnw team</h1>
-                      <form className="px-3" action="#" onSubmit={inviteUser}>
+                      <p className="font-normal py-2 font-poppins font-[14px]">Please enter the user’s email you want to invite to bildnw team</p>
+
+                    
+                      <form  action="#" onSubmit={inviteUser}>
                         <UiInput
                           name="invited_email"
                           onChange={handleChange}
                           label={t("invited_email")}
                         ></UiInput>
                         <div className="text-center">
-                          <UiButton type="submit" label={t("invite_user")}></UiButton>
+                         
                         </div>
+                        <div className="block text-xl cursor-pointer pt-2
+                         flex items-center justify-center gap-x-3 mx-auto  p-3 text-center  rounded-sm">
+                    
+                        <p className="font-[#42526E] font-meduim font-poppins mr-4">Cencal</p>
+                        <UiButton type="submit" label={t("invite_user")}></UiButton>
+                      </div>
                       </form>
+                     </div>
                     </Modal>
                   </div>
 
                 </div>
-                <div className="flex justify-between p-3 border-2">
-                  {colleagues_info.length > 0
-                    ? colleagues_info.map((allColleagues, index) => (
-                      <div className="flex items-center gap-x-2   text-center">
-                        <div className=" ">
-                          <img src={UserIcon} alt="" className="w-4 h-5 " />
-                        </div>
-                        <div className="px-1">
-                          <h4 className="text-lg font-normal text-blue-normal">
-                            {allColleagues?.name}
-                          </h4>
-                          <h4 className="text-sm font-normal font-poppins VP Engineering">
+                <div className="w-full  border-2">
 
-                            {allColleagues?.get_position}, {allColleagues?.email}
-                          </h4>
+                  <div className="flex items-center justify-between gap-x-2   text-center">
+                    <div className="flex items-center p-2">
+                      <img src={UserIcon} alt="" className="w-4 h-5 " />
+                      <div className="px-1 ml-3">
+                      <h4 className="text-lg font-normal text-blue-normal">
+                        Elon Musk
+                      </h4>
+                      <h4 className="text-sm font-normal font-poppins VP Engineering">
 
-                        </div>
-                        <div className="flex items-center gap-x-2   text-center">
-                          <div className=" ">
-                            <img onClick={() => revokeAccess(allColleagues.user_id)} src={RevokIcon} alt="" className="w-5 h-5 " />
-                          </div>
-                          <div className="px-1">
-                            <h4 className="text-lg font-normal text-slate-400">
-                              Revok Access
-                            </h4>
+                        VP Engineering, elon@musk.com
+                      </h4>
 
-                          </div>
-                        </div>
+                    </div>
+                    </div>
+                   
+                    <div  className="flex items-center gap-x-2   text-center">
+                      <div className=" ">
+                        <img onClick={() => setOpens(true)} src={RevokIcon} alt="" className="w-5 h-5 cursor-pointer " />
                       </div>
-
-                    ))
-                    : <h3 className="p-4 text-xl text-center">colleagues Not found</h3>}
-
-
-
-
+                      
+                      <div className="px-1">
+                        <span className="text-lg font-normal text-slate-400">
+                          Revok Access
+                        </span>
+                        <Modal
+                      ref={modalRef}
+                      open={opens}
+                      onClose={() => setOpens(false)}
+                      initialFocusRef={modalRef}
+                      center
+                    >
+                      <div className="px-2">
+                      <div className="block text-xl cursor-pointer flex items-center gap-x-3 mx-auto  p-3 text-center  rounded-sm">
+                        <img src={errorIcon} alt="" className="w-6 h-6" />
+                        <p className="font-meduim font-poppins font-[14px] leading-6 text-[#172B4D]">Delete Account</p>
+                      </div>
+                    <p className="font-normal font-poppins font-[14px]">Are you sure you would like to delete this user’s account and remove it from your team?</p>
+                    <div className="block text-xl cursor-pointer pt-2 flex items-center justify-center gap-x-3 mx-auto  p-3 text-center  rounded-sm">
+                    
+                        <p className="font-[#42526E] font-meduim font-poppins">Cencal</p>
+                        <button className=" bg-[#DE350B] w-[274px] h-[32px] p-1">
+                          <p className="text-white font-bold font-poppins font-[14px] ">Yes, permanently delete this account</p>
+                          </button>
+                      </div>
+                      </div>
+                      </Modal>
+                      </div>
+                      
+                    </div>
+                  </div>
                 </div>
 
 
