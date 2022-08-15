@@ -8,6 +8,11 @@ import { userOtpVerification } from "../../../Services/Actions/AuthAction/logInA
 import { verifyRegister } from "../../../Services/Actions/AuthAction/signUpAction";
 import UiLargeArrowButton from "../../../Components/Common/ui/UiLargeArrowButton";
 
+
+const verificationBox = {
+  boxShadow: "0px 10px 18px rgba(9, 30, 66, 0.15), 0px 0px 1px rgba(9, 30, 66, 0.31)"
+}
+
 const OTPVerification = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -53,21 +58,22 @@ const OTPVerification = () => {
   };
   return (
     <AuthLayout>
-      <div className="w-full py-12 p-4 shadow-lg shadow-slate-300">
+     <div style={verificationBox} className="w-[377px] my-12 p-4">
         <div className="pb-6 text-center">
           <h3 className="text-5xl text-primary-3 pb-8">
             {from === "login" ? "Login" : "Sign up"}{" "}
           </h3>
-          <p>Enter SMS code below to validate your phone number</p>
+          <p className="text-primary-9 font-poppins font-normal">Please Enter the One Time Code we send you to your Email</p>
         </div>
         <form onSubmit={verificationOtp}>
           <div id="otpInputs" className="flex justify-evenly">
-            <AuthCode onChange={handleOnChange} length="6" />
+            <AuthCode onChange={handleOnChange} length="4" />
           </div>
+          <p className="text-center text-primary-9 font-poppins">Code expires in 0:28</p>
 
-          <div className="text-center my-8 ml-5">
+          <div className="text-center my-4 ml-2 font-poppins font-normal">
             {/* <UiButton label="Next"></UiButton> */}
-            <UiLargeArrowButton label="Next"></UiLargeArrowButton>
+            <UiLargeArrowButton label="Confirm"></UiLargeArrowButton>
           </div>
         </form>
       </div>

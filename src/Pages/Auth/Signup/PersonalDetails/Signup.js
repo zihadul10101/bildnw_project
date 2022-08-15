@@ -5,8 +5,14 @@ import { useTranslation } from "react-i18next";
 import { registerAction } from "../../../../Services/Actions/AuthAction/signUpAction";
 import AuthLayout from "../../../../Layout/AuthLayout";
 import UiInput from "../../../../Components/Common/ui/UiInput";
-import UiButton from "../../../../Components/Common/ui/UiButton";
 import UiLargeArrowButton from "../../../../Components/Common/ui/UiLargeArrowButton";
+import SignupInput from "../../../../Components/Common/ui/SignupInput";
+
+
+
+  const signupBox = {
+    boxShadow: "0px 10px 18px rgba(9, 30, 66, 0.15), 0px 0px 1px rgba(9, 30, 66, 0.31)"
+  }
 
 const Signup = () => {
   const { t } = useTranslation();
@@ -52,34 +58,36 @@ const Signup = () => {
 
   return (
     <AuthLayout>
-      <div className="w-full py-4 shadow-lg shadow-slate-300 m-4 p-3">
-        <div className="pb-6 text-center">
+      <div style={signupBox} className="w-[598px] py-4 m-4 p-3">
+        <div className="pb-2 text-center">
           <h3 className="text-5xl text-primary-8">{t("register")}</h3>
           {/* <p>{t("personal_details")}</p> */}
         </div>
-        <form onSubmit={handleSignup} className="p-4 w-full">
-          <UiInput
-            label={t("name")}
-            type="text"
-            name="name"
-            // placeholder={t("enter_name_place")}
-            onChange={handleChange}
-          ></UiInput>
-          <div className="flex gap-2">
+        <form onSubmit={handleSignup} className="p-5 w-[598px]">
+          <div className="mr-3">
             <UiInput
+              label={t("name")}
+              type="text"
+              name="name"
+              // placeholder={t("enter_name_place")}
+              onChange={handleChange}
+            ></UiInput>
+          </div>
+          <div className="flex gap-3">
+            <SignupInput
               label={t("Phone Number")}
               type="text"
               name="phone"
               // placeholder={t("enter_email_place")}
               onChange={handleChange}
-            ></UiInput>
-            <UiInput
+            ></SignupInput>
+            <SignupInput
               label={t("Email (must be a business email)")}
               type="email"
               name="email"
               // placeholder={t("enter_phone_place")}
               onChange={handleChange}
-            ></UiInput>
+            ></SignupInput>
           </div>
           {/* <UiInput
             label={t("position")}
@@ -95,29 +103,29 @@ const Signup = () => {
             placeholder="Add Iqama Number"
             onChange={handleChange}
           ></UiInput> */}
-          <div className="flex gap-2">
-            <UiInput
+          <div className="flex gap-3">
+            <SignupInput
               label={t("Strong password")}
               type="password"
               name="password"
               // placeholder={t("register_password_place")}
               onChange={handleChange}
-            ></UiInput>
+            ></SignupInput>
 
 
-            <UiInput
+            <SignupInput
               label={t("Re-type your password")}
               type="password"
               name="confirm_password"
               // placeholder={t("password_place")}
               onChange={handleChange}
-            ></UiInput>
+            ></SignupInput>
           </div>
-           {passwordSet.length < 8 && passwordSet.length > 0 ? (
-              <p className="text-primary-label">{t("password_help_text")}</p>
-            ) : (
-              ""
-            )}
+          {passwordSet.length < 8 && passwordSet.length > 0 ? (
+            <p className="text-primary-label">{t("password_help_text")}</p>
+          ) : (
+            ""
+          )}
 
           {confirmPasswordSet && passwordSet === confirmPasswordSet ? (
             <p className="text-green-700">{t("password_matched")}</p>
@@ -130,7 +138,7 @@ const Signup = () => {
             ""
           )}
 
-          <div className="text-center my-8">
+          <div className="text-center my-5 mr-3">
             <Link to="/verification">
               {/* <UiButton label={t("next")}></UiButton> */}
               <UiLargeArrowButton label={t("next")} />
@@ -138,10 +146,10 @@ const Signup = () => {
           </div>
         </form>
         <div className="text-center">
-          <p className="py-2 text-blue-normal font-semibold">
+          <p className="py-2 text-blue-normal font-poppins font-medium">
             {t("already_have_an_account")}
             <Link to="/login">
-              <span className="underline"> {t("login")}</span>
+              <span> {t("login now")}</span>
             </Link>
           </p>
         </div>

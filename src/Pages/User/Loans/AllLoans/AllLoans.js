@@ -15,6 +15,11 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import ReactPaginate from "react-paginate";
 
 
+
+const boxShadow = {
+  boxShadow: '0px 8px 12px rgba(9, 30, 66, 0.15), 0px 0px 1px rgba(9, 30, 66, 0.31)'
+}
+
 const AllLoans = () => {
   
   const [click, setClicked] = useState("");
@@ -93,14 +98,14 @@ const AllLoans = () => {
       <MainLayout>
 
         <div className="px-10 py-10 bg-color ">
-        <div className="shadow-lg shadow-gray-300 p-4 bg-white">
+        <div style={boxShadow} className="p-4 bg-white">
 
         <div className=" space-y-4 py-5 bg-white ">
-            <label htmlFor='' className="block pt-4 font-bold text-lg">
+            <label htmlFor='' className="block pt-4 font-medium text-base">
               {t("your_loans")}
             </label>
             <select name="companyType" id="companyType"  value={click}
-              onChange={(e) => setClicked(e.currentTarget.value)} className="border-[3px] border-inputBorder  block my-2 rounded focus:outline-inputBorder px-3 py-3 text-lg bg-white">
+              onChange={(e) => setClicked(e.currentTarget.value)} className="border-[3px] border-inputBorder  block my-2 rounded focus:outline-inputBorder px-3 py-3 text-sm bg-white">
               <option disabled selected>
                 {t("select")}
               </option>

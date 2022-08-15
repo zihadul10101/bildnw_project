@@ -55,8 +55,8 @@ const OverviewMain = () => {
         <div className="bg-[#DEEBFF] h-[88px]">
 
         </div>
-        <div className="ml-[180px] mt-[40px] grid grid-cols-10 ">
-          <div style={box} className="col-span-3  w-96 h-[401px] rounded-lg ">
+        <div className="mt-[40px] ml-[70px] grid grid-cols-10 gap-8 p-3">
+          <div style={box} className="col-span-3 w-[384px] h-[401px] rounded-lg ">
             <div className="first-box-title">
               <h3 className=" text-[#505F79] font-poppins font-bold px-4 border-borderColor">
                 {t("status")}
@@ -74,10 +74,10 @@ const OverviewMain = () => {
           <div className="col-span-7">
             <div className="flex flex-wrap ">
               {/* {glanceLists.map((item, index) => ( */}
-              <div style={lonebox} className="w-96 mx-3 mb-2 h-36 p-4  rounded-lg ">
+              <div style={lonebox} className="w-96 mx-3 mb-2 h-[145.57px] p-4  rounded-lg ">
                 <div className="flex flex-row">
                   <img src={SmallCashIcon} alt="Outstanding Loans" />
-                  <h3 className="text-center w-[153px] left-10 font-poppins font-normal text-white">
+                  <h3 className="text-center w-[153px] font-poppins text-[14px] font-medium text-white">
                     {/* Outstanding Loans */}
                     {t("Outstanding Loans")}
                   </h3>
@@ -93,7 +93,7 @@ const OverviewMain = () => {
               <div style={cridbox} className="w-96 mx-3 h-36 p-4 rounded-lg">
                 <div className="flex flex-row">
                   <img src={CreditLine} alt="Active Credit Line" />
-                  <h3 className="text-center w-[153px] left-10 font-poppins font-normal text-white">
+                  <h3 className="text-center w-[153px] font-poppins text-[14px] font-medium text-white">
                     {/* Active Credit Line */}
                     {t("Active Credit Line")}
                   </h3>

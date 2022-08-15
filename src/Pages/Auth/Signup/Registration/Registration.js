@@ -5,7 +5,9 @@ import { BsDownload } from 'react-icons/bs';
 import { useTranslation } from "react-i18next";
 import CompleteRegistrationBtn from "../../../../Components/Common/ui/CompleteRegistrartionBtn";
 
-
+const registerBox = {
+  boxShadow: "0px 10px 18px rgba(9, 30, 66, 0.15), 0px 0px 1px rgba(9, 30, 66, 0.31)"
+}
 
 const Registration = () => {
   const [isAgree, setIsAgree] = useState(false);

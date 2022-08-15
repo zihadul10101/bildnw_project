@@ -11,6 +11,11 @@ import UiButton from "../../../Components/Common/ui/UiButton";
 import UiArrowButton from "../../../Components/Common/ui/UiArrowButton";
 import useAxios from "../../../Services/Api/Hooks/AxiosHook";
 import UiLargeArrowButton from "../../../Components/Common/ui/UiLargeArrowButton";
+
+
+const loginBox = {
+  boxShadow: "0px 10px 18px rgba(9, 30, 66, 0.15), 0px 0px 1px rgba(9, 30, 66, 0.31)"
+}
 const Login = () => {
   const axiosInstance = useAxios();
   const dispatch = useDispatch();
@@ -44,12 +49,12 @@ const Login = () => {
   };
   return (
     <AuthLayout>
-      <div className="w-full py-12">
-        <div className="shadow-xl p-6 rounded-md shadow-gray-400">
-          <h3 className="text-5xl text-primary-8 pb-8 text-center">
+     <div className="w-[377px] py-12">
+        <div style={loginBox} className="p-6 rounded-md">
+          <h3 className="text-5xl text-primary-8 pb-8 text-center font-poppins">
             {t("sign_in")}
           </h3>
-          <form onSubmit={handleLogin} className="p-4">
+          <form onSubmit={handleLogin}>
             <UiInput
               label={t("login_email")}
               type="email"
@@ -74,15 +79,15 @@ const Login = () => {
           </form>
           <div className="text-center">
             <Link to="/forget-password">
-              <p className="py-2 text-blue-normal font-semibold underline inline">
+              <p className="py-2 text-blue-normal font-medium inline font-poppins">
                 {t("forgot_pass_or_email")}
               </p>
             </Link>
             <br />
-            <p className="py-2 text-blue-normal font-semibold inline">
+            <p className="py-2 text-blue-normal font-medium inline font-poppins">
               {t("dont_have_account")}
               <Link to="/register">
-                <span className="underline"> {t("register_now")}</span>
+                <span> {t("register_now")}</span>
               </Link>
             </p>
           </div>
