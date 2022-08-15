@@ -123,7 +123,8 @@ const ActionCompanyInfo = () => {
               <div className="mx-auto w-2 h-2 bg-gray-200 rounded-full"></div>
               <h6 className="font-[14px] text-[#5E6C84]  font-normal font-poppins">Done</h6>
             </div>
-            <div style={{ "width": `${bar}px` }} className={`mt-2 h-2 rounded-lg button-bg-color absolute left-[3.35rem] top-2`}></div>        </div>
+            <div style={{ "width": `${bar}px` }} className={`mt-2 h-2 rounded-lg button-bg-color absolute left-[3.35rem] top-2`}></div>
+          </div>
           {next == 1 &&
             <div style={box} className=" p-[14px]">
               <h4 className="text-[#253858] font-medium font-poppins text-lg pb-5">Please provide your company information</h4>
@@ -150,7 +151,7 @@ const ActionCompanyInfo = () => {
                 <h6 className="ml-4 font-[14px] font-normal text-[#091E42] font-poppins">I HEREBY CERTIFY that the information provided in this form is complete, true and correct to the best of my knowledge.</h6>
               </div>
 
-              <div onClick={() => { setNext(2); setBar(150) }} className="flex justify-end   pt-2">
+              <div onClick={() => { setNext(2); setBar(150) }} className="flex justify-end  pt-2">
                 <button className="py-2 px-8 capitalize font-poppins flex justify-between item-center rounded-[3px] button-bg-color text-white" onClick={() => { setNext(2); setBar(110) }} type="submit">
                   {"next"}
                   <img src={rightIcon} alt="" className="w-[16px] h-[14px] mt-[7px] ml-[10px]" />
@@ -230,7 +231,7 @@ const ActionCompanyInfo = () => {
                           <span className="text-sm font-poppins">JPG, PNG or PDF, file size no more than 10MB</span>
                         </div>
                         <div className="w-5/12">
-                          <button type="file" className= "font-poppins font-medium text-white ml-5 button-bg-color py-1 px-4">Select file</button>
+                          <button type="file" className="font-poppins font-medium text-white ml-5 button-bg-color py-1 px-4">Select file</button>
                         </div>
                       </div>
                     </div>
@@ -288,7 +289,7 @@ const ActionCompanyInfo = () => {
               </div>
               <div onClick={() => { setNext(3); setBar(270) }} className="flex justify-end   pt-2">
                 <button className="py-2 px-8 capitalize flex bg-gray-200 justify-between item-center rounded-sm " onClick={() => { setNext(2); setBar(110) }} type="submit">
-                  
+
                   <img src={rightIcons} alt="" className="w-[16px] h-[14px] mt-[5px] mr-3" />
                   <p className="text-[#A5ADBA] font-poppins font-medium">    {t("Submit company information")}{" "}</p>
                 </button>

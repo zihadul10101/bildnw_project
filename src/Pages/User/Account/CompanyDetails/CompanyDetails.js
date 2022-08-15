@@ -113,9 +113,9 @@ const CompanyInfo = () => {
           <div className="first-box-title h-3/12">
             <div className=" flex gap-3 text-primary-ash-400 cursor-pointer font-semibold px-4 py-6 border-b-2 ">
 
-              <p onClick={() => { setShow('show'); setShow1(''); setShow2(''); }} className={`${show === 'show' ? 'text-primary-1  cursor-pointer underline decoration-4  decoration-solid decoration-primary-1' : 'border-b-2'}`}>{t(' Company Details')}</p>
-              <p onClick={() => { setShow1('show1'); setShow(''); setShow2('') }} className={`${show1 === 'show1' ? 'text-primary-1 cursor-pointer underline decoration-4 decoration-solid decoration-primary-1' : 'border-b-2'}`} >{t('Company Documentation')} </p>
-              <p onClick={() => { setShow2('show2'); setShow(''); setShow1('') }} className={`${show2 === 'show2' ? 'text-primary-1 cursor-pointer underline decoration-4 decoration-solid decoration-primary-1' : 'border-b-2'}`}>{t('Your Colleagues')}</p>
+              <p onClick={() => { setShow('show'); setShow1(''); setShow2(''); }} className={`${show === 'show' ? 'border-primary-1  cursor-pointer border-b-2' : 'border-b-2'}`}>{t(' Company Details')}</p>
+              <p onClick={() => { setShow1('show1'); setShow(''); setShow2('') }} className={`${show1 === 'show1' ? 'border-primary-1 cursor-pointer border-b-2' : 'border-b-2'}`} >{t('Company Documentation')} </p>
+              <p onClick={() => { setShow2('show2'); setShow(''); setShow1('') }} className={`${show2 === 'show2' ? 'border-primary-1 cursor-pointer border-b-2' : 'border-b-2'}`}>{t('Your Colleagues')}</p>
             </div>
           </div>
           {
