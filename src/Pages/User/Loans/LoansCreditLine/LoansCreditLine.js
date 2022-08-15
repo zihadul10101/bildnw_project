@@ -17,7 +17,11 @@ const LoansCreditLine = () => {
         dispatch(LoansOverview(client_details.client_details?.id));
     }, [client_details.client_details?.id]);
 
-
+    const lonebox = {
+    
+        boxShadow: "0px 8px 12px rgba(9, 30, 66, 0.15), 0px 0px 1px rgba(9, 30, 66, 0.31)"
+    
+      }
 
     return (
         <>
@@ -25,7 +29,7 @@ const LoansCreditLine = () => {
                 <div className="px-12 py-8 bg-color ">
                     <div className="col-span-6">
                         <div className="flex flex-wrap justify-between ">
-                            <div className="w-[30%] rounded-lg shadow-lg shadow-gray-300 bg-primary-1 mb-10 min-h-[152px] h-auto p-4  border-2 ">
+                            <div style={lonebox} className="w-[30%] rounded-lg bg-primary-1 mb-10 min-h-[152px] h-auto p-4  border-2 ">
                                 <div className="flex justify-start items-center">
 
                                     <img src={CreditLine} alt="" className="w-6 h-6 text-white mr-2  font-bold" />
@@ -42,7 +46,7 @@ const LoansCreditLine = () => {
                                     </ul>
                                 </div>
                             </div>
-                            <div className="w-[30%] rounded-lg shadow-lg shadow-gray-300 bg-primary-6 mx-3 mb-10 min-h-[152px] h-auto p-4  border-2 ">
+                            <div style={lonebox} className="w-[30%] rounded-lg  bg-primary-6 mx-3 mb-10 min-h-[152px] h-auto p-4  border-2 ">
 
                                 <div className="flex justify-start items-center">
                                     <img src={CreditLine} alt="" className="w-6 h-6 text-white mr-2  font-bold" />
@@ -58,7 +62,7 @@ const LoansCreditLine = () => {
                                     </ul>
                                 </div>
                             </div>
-                            <div className="w-[30%] rounded-lg shadow-lg shadow-gray-300 bg-primary-4 mx-3 mb-10 min-h-[152px] h-auto border-2 ">
+                            <div style={lonebox} className="w-[30%] rounded-lg shadow-lg  bg-primary-4 mx-3 mb-10 min-h-[152px] h-auto border-2 ">
                                 <div className="">
                                  
                                     <ul className="space-y-2 p-3 ">
@@ -85,7 +89,7 @@ const LoansCreditLine = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-span-6 rounded-lg border-2 bg-primary-4 shadow-lg shadow-gray-300  max-h-auto  ">
+                    <div style={lonebox} className="col-span-6 rounded-lg border-2 bg-primary-4 max-h-auto  ">
                         <div className="first-box-title h-3/12">
                             <h3 className="text-lg font-poppins font-normal text-[#253858] px-6 py-4  ">
                                 {t("full_agreement")}
