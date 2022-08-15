@@ -115,7 +115,7 @@ const MainLayout = ({ children, ...rest }) => {
 
                       <FontAwesomeIcon icon={item.icon} className="w-5 h-5" />
 
-                      <p className="font-poppins "> {item.title} </p>
+                      <p className="font-poppins font-medium font-[16px] leading-10 text-[ #42526E]"> {item.title} </p>
                     </NavLink>
                   </li>
                 ))}

@@ -15,6 +15,10 @@ import UiInput from "../../../Components/Common/ui/UiInput";
 import SelectInput from "../../../Components/Common/ui/SelectInput";
 import UiLargeArrowButton from "../../../Components/Common/ui/UiLargeArrowButton";
 
+const loginBox = {
+  boxShadow: "0px 10px 18px rgba(9, 30, 66, 0.15), 0px 0px 1px rgba(9, 30, 66, 0.31)"
+}
+
 const CompanyInfo = () => {
   const { signupData } = useSelector((state) => state.SignUpInfo);
   const navigate = useNavigate();
@@ -83,10 +87,10 @@ const CompanyInfo = () => {
   return (
     <AuthLayout>
       {registrationPage === false ? (
-        <div className="w-full py-4 shadow-lg shadow-slate-300 m-4 p-3">
+        <div style={{boxShadow: "0px 10px 18px rgba(9, 30, 66, 0.15), 0px 0px 1px rgba(9, 30, 66, 0.31)"}} className="w-[377px] py-4 m-4 p-3 h-[492px]">
           <div className="">
-            <div className="pb-6 text-center">
-              <h3 className="text-xl font-medium text-primary-8">Company Details</h3>
+            <div className="text-center">
+              <h3 className="text-xl font-medium font-poppins text-primary-8">Company Details</h3>
             </div>
             <form onSubmit={handleCompanyDetails}>
               <UiInput
@@ -121,7 +125,7 @@ const CompanyInfo = () => {
               ></UiInput>
 
 
-              <div className="text-center flex space-x-4">
+              <div className="text-center flex">
                 <CheckboxInput
                   name="isLegalAuthority"
                   onChange={handleChange}
@@ -129,7 +133,7 @@ const CompanyInfo = () => {
                 behalf of the company whose CR is entered above."
                 ></CheckboxInput>
               </div>
-              <div className="text-center my-8">
+              <div className="text-center">
                 {/* <Link to="/registration"> */}
                 {/* <UiButton label="Next"></UiButton> */}
                 <UiLargeArrowButton label="Next" ></UiLargeArrowButton>
@@ -143,7 +147,7 @@ const CompanyInfo = () => {
           <div className="pb-6 text-center">
             <h3 className="text-5xl text-blue-light pb-8">Register</h3>
             <div className="w-full h-96 overflow-y-scroll border-4 rounded-lg">
-              <p className="text-justify p-3">
+              <p className="text-justify p-3 font-normal text-[#091E42] font-poppins">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
                 mollitia, molestiae quas vel sint commodi repudiandae
                 consequuntur voluptatum laborum numquam blanditiis harum

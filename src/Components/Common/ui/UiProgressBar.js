@@ -6,8 +6,8 @@ const UiProgressBar = ({ width }) => {
   }
   return (
     <>
-      <div className="w-full h-2 bg-[#FF8B00] rounded-full mt-3" style={style}>
-        <div className="w-1/4 h-full text-center text-xs  text-white bg-progress-1 rounded-full">
+      <div className="w-full h-2 bg-[#F4F5F7] rounded-full mt-3" >
+        <div style={style} className="w-1/4 h-full text-center text-xs   bg-[#FFAB00]  rounded-full">
         </div>
       </div>
     </>
