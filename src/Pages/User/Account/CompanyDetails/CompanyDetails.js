@@ -507,12 +507,12 @@ const CompanyInfo = () => {
                         <p className="font-meduim font-poppins font-[14px] leading-6 text-[#172B4D]">Delete Account</p>
                       </div>
                     <p className="font-normal font-poppins font-[14px]">Are you sure you would like to delete this user’s account and remove it from your team?</p>
-                    <div className="block text-xl cursor-pointer pt-2 flex items-center justify-center gap-x-3 mx-auto  p-3 text-center  rounded-sm">
+                    <div className="block text-xl cursor-pointer pt-4 flex items-center justify-center gap-x-3 mx-auto  p-3 text-center  rounded-sm">
                     
-                        <p className="font-[#42526E] font-meduim font-poppins">Cencal</p>
-                        <button className=" bg-[#DE350B] w-[274px] h-[32px] p-1">
-                          <p className="text-white font-bold font-poppins font-[14px] ">Yes, permanently delete this account</p>
-                          </button>
+                        <p className="font-[#42526E] font-meduim font-poppins ">Cencal</p>
+                        <div className=" bg-[#DE350B] w-[274px] h-[32px] rounded-sm ml-5 ">
+                          <p className="text-white font-bold font-poppins font-[10px] ">Yes, permanently delete this account</p>
+                          </div>
                       </div>
                       </div>
                       </Modal>
