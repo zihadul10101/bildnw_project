@@ -111,23 +111,22 @@ const Profile = () => {
               <ul className="space-y-2 ">
                 <li className="text-[18px] flex  border-b-2 pb-1 px-4 text-start ">
 
-                  <p className="font-poppins font-normal text-[#172B4D] font-[14px] mr-16"> Position: </p>
+                  <p className="font-poppins font-normal text-[#172B4D] font-[14px] mr-16"> Position <span className="ml-16">:</span> </p>
                   <p className="font-semibold font-poppins font-semibold font-[16px]  text-[#253858]">CEO</p>
                 </li>
                 <li className="text-[18px] flex  border-b-2 pb-1 px-4 text-start ">
-
-                  <p className="font-poppins font-normal text-[#172B4D] font-[14px] mr-16"> Number: </p>
+                  <p className="font-poppins font-normal text-[#172B4D] font-[14px] mr-16"> Number<span className="ml-[68px]">:</span> </p>
                   <p className=" font-poppins font-semibold font-[16px] text-[#253858]"> xxxxxxx </p>
                 </li>
                 <li className="text-[18px] flex  border-b-2 pb-1 px-4 text-start ">
 
-                  <p className="font-poppins font-normal text-[#172B4D] font-[14px] mr-20"> Email: </p>
-                  <p className=" font-poppins font-semibold font-[16px] text-[#253858]"> rahat@gmail.com </p>
+                  <p className="font-poppins font-normal text-[#172B4D] font-[14px] mr-20"> Email<span className="ml-[87px]">:</span> </p>
+                  <p className=" font-poppins font-semibold font-[16px] text-[#253858] ml-[-15px]"> rahat@gmail.com</p>
                 </li>
-                <li className="text-[18px] flex   pb-1 px-4 text-start ">
+                <li className="text-[18px] flex   pb-1 px-4 text-center ">
 
                   <p className="font-poppins font-normal text-[#172B4D] font-[14px] mr-10"> Company Admin: </p>
-                  <p className=" font-poppins font-semibold font-[16px] text-[#253858]"> Yes </p>
+                  <p className=" font-poppins font-semibold font-[16px] text-[#253858] ml-6"> Yes </p>
                 </li>
 
               </ul>

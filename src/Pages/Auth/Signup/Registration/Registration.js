@@ -5,7 +5,9 @@ import { BsDownload } from 'react-icons/bs';
 import { useTranslation } from "react-i18next";
 import CompleteRegistrationBtn from "../../../../Components/Common/ui/CompleteRegistrartionBtn";
 
-
+const registerBox = {
+  boxShadow: "0px 10px 18px rgba(9, 30, 66, 0.15), 0px 0px 1px rgba(9, 30, 66, 0.31)"
+}
 
 const Registration = () => {
   const [isAgree, setIsAgree] = useState(false);
@@ -25,15 +27,15 @@ const Registration = () => {
   return (
     <>
       <div className="pt-14">
-        <div className="px-8 py-12 rounded-xl w-6/12 mx-auto">
+        <div className="px-8 py-12 rounded-xl w-[815px] h-[544px] mx-auto">
           <form onSubmit={handleRegistration}>
             <div className="text-center">
               <div className="border-2 bg-primary-4 shadow-lg shadow-gray-300  max-h-auto  ">
                 <div className="px-6 py-8 ">
                   <div className="w-full p-5 h-96 overflow-y-scroll border-2 rounded-lg bg-primary-ash-light">
-                    <h3 className="text-3xl text-primary-3 text-start font-bold mb-3">Credit line agreement
+                    <h3 className="text-[32px] text-primary-3 font-poppins text-start font-bold mb-3">Credit line agreement
                     </h3>
-                    <p className="text-justify">
+                    <p className="text-justify font-poppins">
                       Fermentum, cras et sed dolor mattis cras dui. Donec leo orci suspendisse morbi dignissim. Eu orci augue sem sagittis. Eget a, ut pretium mus. Donec mi amet diam sociis amet. Turpis erat sollicitudin non nunc, aliquet facilisis hendrerit. Vestibulum donec orci congue nullam facilisis dolor, at sem. Magna pharetra, quam consectetur turpis mi pellentesque elementum ultrices. Ut et imperdiet amet, massa.
                       Ultricies pulvinar eu, justo senectus sagittis, tortor, nisl. Varius suspendisse vel urna fermentum sem dictumst sit dictum. In lacus, sit eget egestas elementum tortor sit praesent. Diam ultricies dis est tellus viverra donec auctor vulputate mauris. Sodales odio consequat est sit magna. Bibendum porttitor quam habitant pharetra. Luctus varius eget condimentum sodales sagittis sed malesuada tortor. Orci quis justo, ut viverra fusce. Est ornare pretium, aliquam velit eros sollicitudin. Ac non imperdiet dignissim pulvinar sapien velit sed. Neque, eget rhoncus imperdiet gravida urna, aliquam. Pharetra, vitae netus mi urna cursus molestie lectus bibendum in. Quis donec donec eu, bibendum lacus. Etiam mus venenatis nunc enim. Velit in faucibus ultrices eget pellentesque at.
                       Egestas etiam dictum malesuada aliquam scelerisque ipsum. Elit, id nam turpis lorem bibendum morbi pretium risus. Suspendisse porttitor ornare viverra id consectetur a. Scelerisque eu nullam sapien nibh. Consectetur quis lorem mi ac urna tincidunt ut. Ornare velit vivamus ac est. Egestas turpis non facilisis facilisis viverra hendrerit diam.
@@ -42,20 +44,22 @@ const Registration = () => {
                     </p>
                   </div>
                 </div>
-                <div className="flex p-4">
-                  <CheckboxInput name="isAgree" onChange={handleChange} />
-                  <p className="py-2 text-[#091E42] font-normal">
-                    I have read the above agreement and agree to allow Bildnw to
-                    gather data related to my comapny (CR XXXXXXXXX) from Simah.
-                  </p>
+                <div className="p-5">
+                  <div className="flex text-start">
+                    <CheckboxInput name="isAgree" onChange={handleChange} />
+                    <p className="py-2 ml-2 text-[#091E42] font-normal text-sm">
+                      I have read the above agreement and agree to allow Bildnw to
+                      gather data related to my comapny (CR XXXXXXXXX) from Simah.
+                    </p>
+                  </div>
                 </div>
                 {/* <div className="first-box-title h-3/12"> */}
-                  <div className="text-center p-3 ml-4">
-                    {/* <Link to="/verification"> */}
-                    {/* <UiButton label="Complete registration" /> */}
-                    <CompleteRegistrationBtn label="Complete registration"></CompleteRegistrationBtn>
-                    {/* </Link> */}
-                  </div>
+                <div className="text-center p-3">
+                  {/* <Link to="/verification"> */}
+                  {/* <UiButton label="Complete registration" /> */}
+                  <CompleteRegistrationBtn label="Complete registration"></CompleteRegistrationBtn>
+                  {/* </Link> */}
+                </div>
                 {/* </div> */}
               </div>
             </div>

@@ -113,9 +113,9 @@ const CompanyInfo = () => {
           <div className="first-box-title h-3/12">
             <div className=" flex gap-3 text-primary-ash-400 cursor-pointer font-semibold px-4 py-6 border-b-2 ">
 
-              <p onClick={() => { setShow('show'); setShow1(''); setShow2(''); }} className={`${show === 'show' ? 'text-primary-1  cursor-pointer underline decoration-4  decoration-solid decoration-primary-1' : 'border-b-2'}`}>{t(' Company Details')}</p>
-              <p onClick={() => { setShow1('show1'); setShow(''); setShow2('') }} className={`${show1 === 'show1' ? 'text-primary-1 cursor-pointer underline decoration-4 decoration-solid decoration-primary-1' : 'border-b-2'}`} >{t('Company Documentation')} </p>
-              <p onClick={() => { setShow2('show2'); setShow(''); setShow1('') }} className={`${show2 === 'show2' ? 'text-primary-1 cursor-pointer underline decoration-4 decoration-solid decoration-primary-1' : 'border-b-2'}`}>{t('Your Colleagues')}</p>
+              <p onClick={() => { setShow('show'); setShow1(''); setShow2(''); }} className={`${show === 'show' ? 'border-primary-1  cursor-pointer border-b-2' : 'border-b-2'}`}>{t(' Company Details')}</p>
+              <p onClick={() => { setShow1('show1'); setShow(''); setShow2('') }} className={`${show1 === 'show1' ? 'border-primary-1 cursor-pointer border-b-2' : 'border-b-2'}`} >{t('Company Documentation')} </p>
+              <p onClick={() => { setShow2('show2'); setShow(''); setShow1('') }} className={`${show2 === 'show2' ? 'border-primary-1 cursor-pointer border-b-2' : 'border-b-2'}`}>{t('Your Colleagues')}</p>
             </div>
           </div>
           {
@@ -507,12 +507,12 @@ const CompanyInfo = () => {
                         <p className="font-meduim font-poppins font-[14px] leading-6 text-[#172B4D]">Delete Account</p>
                       </div>
                     <p className="font-normal font-poppins font-[14px]">Are you sure you would like to delete this user’s account and remove it from your team?</p>
-                    <div className="block text-xl cursor-pointer pt-4 flex items-center justify-center gap-x-3 mx-auto  p-3 text-center  rounded-sm">
+                    <div className="block text-xl cursor-pointer pt-2 flex items-center justify-center gap-x-3 mx-auto  p-3 text-center  rounded-sm">
                     
-                        <p className="font-[#42526E] font-meduim font-poppins ">Cencal</p>
-                        <div className=" bg-[#DE350B] w-[274px] h-[32px] rounded-sm ml-5 ">
-                          <p className="text-white font-bold font-poppins font-[10px] ">Yes, permanently delete this account</p>
-                          </div>
+                        <p className="font-[#42526E] font-meduim font-poppins">Cencal</p>
+                        <button className=" bg-[#DE350B] w-[274px] h-[32px] p-1">
+                          <p className="text-white font-bold font-poppins font-[14px] ">Yes, permanently delete this account</p>
+                          </button>
                       </div>
                       </div>
                       </Modal>

@@ -6,6 +6,12 @@ import { BsDownload } from 'react-icons/bs';
 import CreditLine from '../../../../Assets/images/creditLine.svg';
 import { useDispatch, useSelector } from "react-redux";
 import { LoansOverview } from "../../../../Services/Actions/LoansAction/LoansAction";
+
+
+
+const boxShadow = {
+    boxShadow: '0px 8px 12px rgba(9, 30, 66, 0.15), 0px 0px 1px rgba(9, 30, 66, 0.31)'
+}
 const LoansCreditLine = () => {
     const { t } = useTranslation();
 
@@ -17,87 +23,81 @@ const LoansCreditLine = () => {
         dispatch(LoansOverview(client_details.client_details?.id));
     }, [client_details.client_details?.id]);
 
-    const lonebox = {
-    
-        boxShadow: "0px 8px 12px rgba(9, 30, 66, 0.15), 0px 0px 1px rgba(9, 30, 66, 0.31)"
-    
-      }
+
 
     return (
         <>
             <MainLayout>
                 <div className="px-12 py-8 bg-color ">
                     <div className="col-span-6">
-                        <div className="flex flex-wrap justify-between ">
-                            <div style={lonebox} className="w-[30%] rounded-lg bg-primary-1 mb-10 min-h-[152px] h-auto p-4  border-2 ">
+                        <div className="flex justify-between ">
+                            <div style={boxShadow} className="w-[338px] rounded-lg bg-primary-1 mb-10 h-[152px] p-4">
                                 <div className="flex justify-start items-center">
-
                                     <img src={CreditLine} alt="" className="w-6 h-6 text-white mr-2  font-bold" />
-
-                                    <h3 className="text-center w-[153px] left-10 font-poppins font-normal text-white ">
+                                    <h3 className="text-center left-10 font-poppins font-medium text-base text-white ">
                                         {t("total_creditline")}
                                     </h3>
                                 </div>
-                                <div className="h-full flex items-center justify-center">
+                                <div className="h-full flex items-center">
                                     <ul className="space-y-4">
-                                        <li className="text-[44px] font-normal text-white">
-                                            1,000,000 <sub className="text-[22px]">SAR</sub>
+                                        <li className="text-[36px] font-normal text-white font-poppins">
+                                            1,000,000 <sub className="text-base font-poppins">SAR</sub>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div style={lonebox} className="w-[30%] rounded-lg  bg-primary-6 mx-3 mb-10 min-h-[152px] h-auto p-4  border-2 ">
+                            <div style={boxShadow} className="w-[338px] rounded-lg bg-primary-6 mx-3 mb-10 h-[152px] p-4">
 
                                 <div className="flex justify-start items-center">
                                     <img src={CreditLine} alt="" className="w-6 h-6 text-white mr-2  font-bold" />
-                                    <h3 className="text-center w-[153px] left-10 font-poppins font-normal text-white">
+                                    <h3 className="text-center left-10 font-poppins font-medium text-base text-white">
                                         {t("available_to_spend")}
                                     </h3>
                                 </div>
                                 <div className="h-full flex justify-center items-center">
                                     <ul className="space-y-4">
-                                        <li className="text-[44px] font-normal text-white">
-                                            1,000,000 <sub className="text-[22px]">SAR</sub>
+                                        <li className="text-[36px] font-normal text-white font-poppins">
+                                            1,000,000 <sub className="text-base font-poppins">SAR</sub>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div style={lonebox} className="w-[30%] rounded-lg shadow-lg  bg-primary-4 mx-3 mb-10 min-h-[152px] h-auto border-2 ">
+                            <div style={boxShadow} className="w-[338px] rounded-lg bg-primary-4 mx-2 mb-10 min-h-[152px] h-auto">
                                 <div className="">
-                                 
+
                                     <ul className="space-y-2 p-3 ">
-                                        <li className="text-[18px] flex  border-b-2 pb-1 px-4 text-start ">
+                                        <li className="text-sm flex  border-b-[1px] pb-1 px-4 text-start ">
 
                                             <p className="font-poppins font-normal text-[#172B4D] mr-10"> {t("rate")}: </p>
-                                            <p className="font-semibold font-poppins font-normal text-[#253858]">3% per month</p>
+                                            <p className="font-medium font-poppins text-base text-[#253858]">3% per month</p>
                                         </li>
-                                        <li className="text-[18px] flex  border-b-2 pb-1 px-4 text-start ">
+                                        <li className="text-sm flex border-b-[1px] pb-1 px-4 text-start ">
 
                                             <p className="font-poppins font-normal text-[#172B4D] mr-10">  {t("Term")}: </p>
-                                            <p className="font-semibold font-poppins font-normal text-[#253858]"> 3 months </p>
+                                            <p className="font-medium font-poppins text-[#253858] text-base"> 3 months </p>
                                         </li>
-                                        <li className="text-[18px] flex px-4 text-start ">
+                                        <li className="text-sm flex px-4 text-start ">
 
                                             <p className="font-poppins font-normal text-[#172B4D] mr-6 ">     {t("Material")}: </p>
-                                            <p className="flex justify-center text-lg px-1   rounded bg-primary-6 text-white">
+                                            <p className="flex text-base px-1 rounded font-medium bg-primary-6 text-white">
                                                 {/* {loansOverviewInfo?.terms?.material} */}
                                                 rabber
-                                                </p>
+                                            </p>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div style={lonebox} className="col-span-6 rounded-lg border-2 bg-primary-4 max-h-auto  ">
+                    <div style={boxShadow} className="col-span-6 rounded-lg border-2 bg-primary-4  max-h-auto  ">
                         <div className="first-box-title h-3/12">
-                            <h3 className="text-lg font-poppins font-normal text-[#253858] px-6 py-4  ">
+                            <h3 className="text-base font-poppins font-medium text-[#344563] px-6 py-4  ">
                                 {t("full_agreement")}
                             </h3>
                         </div>
                         <div className="px-6 py-6 ">
                             <div className="w-full p-5 h-96 overflow-y-scroll border-4 rounded-lg bg-[#EBECF0] ">
-                                <h3 className="text-2xl font-poppins font-bold mb-3">
+                                <h3 className="text-[32px] font-poppins font-bold mb-3">
                                     Credit line agreement
                                 </h3>
                                 <p className="text-justify font-poppins font-normal text-[#344563]">
@@ -115,7 +115,7 @@ const LoansCreditLine = () => {
                                 href={baseRoot + loansOverviewInfo.agreement}
                                 target="_blank"
                             >
-                                <button className="flex justify-center items-center bg-slate-700 text-white  ml-5 border-2 border-slate-700 rounded px-2 py-2 text-slate  "> <BsDownload className="text-white mr-2 font-bold" /> Download Agreement </button>
+                                <button className="flex justify-center items-center bg-slate-700 text-white  ml-5 border-2 rounded px-2 py-2 text-slate  "> <BsDownload className="text-white mr-2 font-medium" /> Download Agreement </button>
                             </a>
 
                         </div>

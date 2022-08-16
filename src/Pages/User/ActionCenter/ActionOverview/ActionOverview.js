@@ -82,7 +82,6 @@ const ActionOverview = () => {
   const statusbox = {
     background: '#FFFFFF',
     boxShadow: "0px 8px 12px rgba(9, 30, 66, 0.15), 0px 0px 1px rgba(9, 30, 66, 0.31)"
-
   }
   const companybox = {
     background: '#FFFFFF',
@@ -123,18 +122,6 @@ const ActionOverview = () => {
                     </p>
                   </div>
                 </div>
-
-
-                <div style={innerbox} className="border-2">
-                  <div className="flex  item-center justify-center p-1 ">
-                    <img src={Materials} alt="Purchase Materials" className='w-[18px] h-[18px] mr-2 ' />
-                    <p className="font-medium font-[14px] text-[#A5ADBA] font-poppins">
-                      {t("purchase_materials")}
-                    </p>
-                  </div>
-                </div>
-
-
                 <div style={innerbox} className="border-2">
                   <div className="flex  item-center justify-center p-1 ">
                     <img src={UploadNotes} alt="Upload Notes" className='w-[18px] h-[18px] mr-2 ' />
@@ -187,6 +174,15 @@ const ActionOverview = () => {
                     </div>
                   </form>
                 </Modal>
+
+                <div style={innerbox} className="border-2">
+                  <div className="flex  item-center justify-center p-1 ">
+                    <img src={Materials} alt="Purchase Materials" className='w-[18px] h-[18px] mr-2 ' />
+                    <p className="font-medium font-[14px] text-[#A5ADBA] font-poppins">
+                      {t("purchase_materials")}
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

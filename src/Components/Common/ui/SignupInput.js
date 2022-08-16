@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const UiInput = (props) => {
+const SignupInput = (props) => {
   return (
     <div>
       <label htmlFor={props.name} className="block pt-2 font-xs font-medium font-poppins text-[#6B778C]">
@@ -13,10 +13,10 @@ const UiInput = (props) => {
         onChange={props.onChange}
         defaultValue={props.value}
         disabled={props.disabled}
-        className="border-[2px] border-inputBorder w-full block my-1 rounded focus:outline-inputBorder p-1 text-lg"
+        className="border-[2px] border-inputBorder font-poppins w-[267px] block my-1 rounded focus:outline-inputBorder p-1 text-lg"
       />
     </div>
   );
 };
 
-export default UiInput;
+export default SignupInput;

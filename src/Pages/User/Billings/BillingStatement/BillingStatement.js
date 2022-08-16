@@ -82,7 +82,7 @@ const BillingStatement = () => {
 
       <div className="px-10 py-10  grid grid-cols-8">
         <div style={table} className="col-span-5  p-6">
-          <div className="flex justify-between px-2 items-center my-6">
+          <div className="flex justify-between px-2 items-center my-2">
             <h3 className="text-2xl px-3 font-poppins font-normal text-[#253858]">{t("statement")}</h3>
             <button className="flex justify-center items-center  text-lg px-5 py-2  bg-primary-1 ">
               <img src={repay} alt="" className="w-6 h-6 mr-3" />{" "}

@@ -55,8 +55,8 @@ const OverviewMain = () => {
         <div className="bg-[#DEEBFF] h-[88px]">
 
         </div>
-        <div className="ml-[180px] mt-[40px] grid grid-cols-10 ">
-          <div style={box} className="col-span-3  w-96 h-[401px] rounded-lg ">
+        <div className="mt-[40px] ml-[70px] grid grid-cols-10 gap-8 p-3">
+          <div style={box} className="col-span-3 w-[384px] h-[401px] rounded-lg ">
             <div className="first-box-title">
               <h3 className=" text-[#505F79] font-poppins font-bold px-4 border-borderColor">
                 {t("status")}
@@ -67,17 +67,17 @@ const OverviewMain = () => {
               <span className="text-[#FF8B00] bg-[#FFFAE6] font-poppins uppercase font-bold left-1 rounded-lg">Pre-Approval Pending</span>
               {/* progress bar  */}
               <UiProgressBar  width="30%" />
-              <p className="text-[#8993A4] font-poppins font-normal mt-5">Next Step:</p>
+              <p className="text-[#8993A4] font-poppins font-medium leading-5 mt-5">Next Step:</p>
               <UiArrowButton label={t('Provide Company Details')} />
             </div>
           </div>
           <div className="col-span-7">
             <div className="flex flex-wrap ">
               {/* {glanceLists.map((item, index) => ( */}
-              <div style={lonebox} className="w-96 mx-3 mb-2 h-36 p-4  rounded-lg ">
+              <div style={lonebox} className="w-96 mx-3 mb-2 h-[145.57px] p-4  rounded-lg ">
                 <div className="flex flex-row">
                   <img src={SmallCashIcon} alt="Outstanding Loans" />
-                  <h3 className="text-center w-[153px] left-10 font-poppins font-normal text-white">
+                  <h3 className="text-center w-[153px] font-poppins font-[16px] leading-6 font-medium text-white">
                     {/* Outstanding Loans */}
                     {t("Outstanding Loans")}
                   </h3>
@@ -93,7 +93,7 @@ const OverviewMain = () => {
               <div style={cridbox} className="w-96 mx-3 h-36 p-4 rounded-lg">
                 <div className="flex flex-row">
                   <img src={CreditLine} alt="Active Credit Line" />
-                  <h3 className="text-center w-[153px] left-10 font-poppins font-normal text-white">
+                  <h3 className="text-center w-[153px] font-poppins font-[16px] leading-6 font-medium text-white">
                     {/* Active Credit Line */}
                     {t("Active Credit Line")}
                   </h3>
@@ -107,7 +107,7 @@ const OverviewMain = () => {
                 </div>
               </div>
               <div style={totallonebox} className="w-96 mx-3 mb-10 h-[272px] p-4 rounded-lg ">
-                <h3 className=" text-base font-poppins font-normal text-[#505F79]">
+                <h3 className=" text-base font-poppins font-[16px] leading-6 font-normal text-[#505F79]">
                   {/* Total loans */}
                   {t("total_loans")}
                 </h3>
@@ -121,7 +121,7 @@ const OverviewMain = () => {
                 </div>
               </div>
               <div style={nearestbox} className="w-96 mx-3 mb-10 h-[327px] p-4 rounded-lg">
-                <h3 className="text-base font-poppins font-normal text-[#505F79]">
+                <h3 className="text-base font-[16px] leading-6 font-poppins font-normal text-[#505F79]">
                   {/* Nearest repayment */}
                   {t("nearest_repayment")}
                 </h3>
